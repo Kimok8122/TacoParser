@@ -86,7 +86,7 @@ namespace LoggingKata
 
                     if (corA.GetDistanceTo(corB) > distance)
                     {
-                        distance = Math.Round(corA.GetDistanceTo(corB)/ 1609.344);
+                        distance = (corA.GetDistanceTo(corB));
                         tacoBell1 = locA;
                         tacoBell2 = locB;
                     }
@@ -99,7 +99,7 @@ namespace LoggingKata
 
             // Once you've looped through everything, you've found the two Taco Bells farthest away from each other.
 
-            logger.LogInfo($"Look here:  Taco Bell: {tacoBell1.Name} and Taco Bell: {tacoBell2.Name} has a distance of { distance} miles. ");           
+            logger.LogInfo($"Look here:  Taco Bell: {tacoBell1.Name} and Taco Bell: {tacoBell2.Name} has a distance of {distance * 0.00062137} miles. ");           
 
 
 
